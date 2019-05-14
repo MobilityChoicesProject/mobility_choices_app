@@ -325,8 +325,8 @@ export default class ProfileScreen extends Component {
                             selectedValue={ObjectHelper.getValueOrDefaultString(this.state.myProfile.footThreshold)}
                             onValueChange={this.updateFootValue}>
                             <Item label="1 km" value="1"/>
-                            <Item label="2 km" value="3"/>
-                            <Item label="3 km" value="4"/>
+                            <Item label="2 km" value="2"/>
+                            <Item label="3 km" value="3"/>
                             <Item label="4 km" value="4"/>
                             <Item label="5 km" value="5"/>
                             <Item label="6 km" value="6"/>
@@ -370,8 +370,8 @@ export default class ProfileScreen extends Component {
                             selectedValue={ObjectHelper.getValueOrDefaultString(this.state.myProfile.bikeThreshold)}
                             onValueChange={this.updateBikeValue}>
                             <Item label="1 km" value="1"/>
-                            <Item label="2 km" value="3"/>
-                            <Item label="3 km" value="4"/>
+                            <Item label="2 km" value="2"/>
+                            <Item label="3 km" value="3"/>
                             <Item label="4 km" value="4"/>
                             <Item label="5 km" value="5"/>
                             <Item label="6 km" value="6"/>
@@ -422,8 +422,8 @@ export default class ProfileScreen extends Component {
                             selectedValue={ObjectHelper.getValueOrDefaultString(this.state.myProfile.changeTrainThreshold)}
                             onValueChange={this.updateChangeTrainValue}>
                             <Item label="1" value="1"/>
-                            <Item label="2" value="3"/>
-                            <Item label="3" value="4"/>
+                            <Item label="2" value="2"/>
+                            <Item label="3" value="3"/>
                             <Item label="4" value="4"/>
                             <Item label="5" value="5"/>
                             <Item label="6" value="6"/>
@@ -466,8 +466,8 @@ export default class ProfileScreen extends Component {
                             selectedValue={ObjectHelper.getValueOrDefaultString(this.state.myProfile.footToStationThreshold)}
                             onValueChange={this.updateFootToStationValue}>
                             <Item label="1 km" value="1"/>
-                            <Item label="2 km" value="3"/>
-                            <Item label="3 km" value="4"/>
+                            <Item label="2 km" value="2"/>
+                            <Item label="3 km" value="3"/>
                             <Item label="4 km" value="4"/>
                             <Item label="5 km" value="5"/>
                             <Item label="6 km" value="6"/>
@@ -502,8 +502,8 @@ export default class ProfileScreen extends Component {
                             selectedValue={ObjectHelper.getValueOrDefaultString(this.state.myProfile.bikeToStationThreshold)}
                             onValueChange={this.updateBikeToStationValue}>
                             <Item label="1 km" value="1"/>
-                            <Item label="2 km" value="3"/>
-                            <Item label="3 km" value="4"/>
+                            <Item label="2 km" value="2"/>
+                            <Item label="3 km" value="3"/>
                             <Item label="4 km" value="4"/>
                             <Item label="5 km" value="5"/>
                             <Item label="6 km" value="6"/>
