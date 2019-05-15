@@ -1,0 +1,80 @@
+# Disable sending stats
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'MobilityChoices' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+
+  ## Pods for MobilityChoices
+
+  # pod 'CocoaLumberjack'
+
+  # Required for react
+  # https://github.com/facebook/react-native/issues/12670
+  # https://github.com/react-community/react-native-maps/issues/1078
+  # upgrading issues for react
+  node_modules_path = '../node_modules'
+  react_native_path = node_modules_path + '/react-native'
+  # https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#configuring-cocoapods-dependencies
+  # https://stackoverflow.com/questions/45550228/react-native-ios-build-failed-undefined-symbols-for-architecture-x86-64
+  pod 'React', :path => react_native_path, :subspecs => [
+    #'BatchedBridge', # Required For React Native 0.45.0+   # https://github.com/invertase/react-native-firebase/issues/321  # https://github.com/facebook/react-native/issues/14925
+    'Core',
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+    'RCTText',
+    'RCTAnimation',
+    'RCTLinkingIOS',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTPushNotification',
+    'RCTActionSheet',
+    'RCTGeolocation',
+    'RCTSettings',
+    'RCTVibration',
+    'RCTWebSocket', # needed for debugging,
+    'CxxBridge' # Include if RN >= 0.47
+    # Add any other subspecs you want to use in your project
+  ]
+
+  pod 'yoga', :path => react_native_path + '/ReactCommon/yoga'
+
+  pod 'Firebase', :subspecs => [
+    'Core',
+    'Messaging'
+  ]
+
+  pod 'RNFirebase', :path => node_modules_path + '/react-native-firebase/ios'
+
+  pod 'RNBackgroundGeolocation', :path => node_modules_path + '/react-native-background-geolocation'
+
+  pod 'RNBackgroundFetch', :path => node_modules_path + '/react-native-background-fetch'
+
+  pod 'react-native-geocoder', :path => node_modules_path + '/react-native-geocoder'
+
+  pod 'react-native-maps', :path => node_modules_path + '/react-native-maps'
+
+  pod 'ReactNativePermissions', :path => node_modules_path + '/react-native-permissions'
+
+  pod 'RNVectorIcons', :path => node_modules_path + '/react-native-vector-icons'
+
+
+
+  ## Third party dependencies
+
+  # required for CXXBridge
+  # https://github.com/mhorowitz/native-navigation-boilerplate/blob/master/ios/Podfile#L12-L14
+  pod 'DoubleConversion', :podspec => react_native_path + '/third-party-podspecs/DoubleConversion.podspec'
+  pod 'GLog', :podspec => react_native_path + '/third-party-podspecs/GLog.podspec'
+  pod 'Folly', :podspec => react_native_path + '/third-party-podspecs/Folly.podspec'
+
+
+  target 'MobilityChoicesTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
